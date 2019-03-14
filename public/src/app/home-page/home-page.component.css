@@ -1,0 +1,20 @@
+/* background image source */
+
+/* https://ubernewsroomapi.10upcdn.com/wp-content/uploads/2015/10/HQ_uberkittens_blog_960x540_r1v1.jpg */
+
+/* * { border: 1px solid red;} */
+
+@media only screen and (min-width: 1px) {
+    .table th {
+        border-top: 0;
+    }
+    .table-sm td, .table-sm th {
+        padding: 2rem;
+    }
+    .header {
+        background: url(https://i.ibb.co/YQCpdjn/home-Page-Header-Image.png);
+        background-size: cover;
+    }
+}
+
+@media only screen and (min-width: 768px) {}

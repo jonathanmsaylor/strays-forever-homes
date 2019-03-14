@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Cat Q</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <div class="container" style="text-align: center;">
+    <div class="header" [routerLink]="['']">
+      <div class="row shadow-sm" style="text-align: center; display: inherit; margin-top: 13px; padding-bottom: 110px;  border-bottom: 2px solid black;">
+        <p style="font-size: 49px; font-family: bauhus; font-weight: 600; font-style: italic;">CatQ</p>
+      </div>
+    </div>
+    <div class="row" style="background-color: rgba(179, 103, 42, 0.267); margin: 15px; border: 1px solid black; border-radius: 10px;">
+      <p style="color: rgb(0, 0, 0); margin-top: 10px; padding: 20px; font-size: 25px;">Uniting stray cats and kittens with their new furrever homes</p>
+    </div>
+    <hr>
+    <!-- the commented code below will eventually become the list of all the cat breeds and you will be able to click the 
+      card and be taken to that specific breeds information page, but I am struggling assigning each cat 
+      card without creating multiple component for them -->
+
+    <!-- <div class="row" style="flex-wrap: nowrap; margin: 20px; justify-content: center;">
+      <button [routerLink]="['/cats', cat.breedname]" class="col-sm-6 shadow-lg" style="border: 1px solid black; margin: 10px; border-radius: 10px;">
+        <div class="row" style="border-bottom: 1px solid black; justify-content: center; margin: 0;">
+          <p>Abyssinian Cat</p>
+        </div>
+        <div class="row" style="justify-content: center">
+          <img src="https://i.ibb.co/HTQVMr0/abyssinian.png" style="width: 95%; height: 95%; padding: 10px;">
+        </div>
+      </button>
+      <div class="col-sm-6 shadow-lg" style="border: 1px solid black; margin: 10px; border-radius: 10px;">
+        <div class="row" style="border-bottom: 1px solid black; justify-content: center; margin: 0;">
+          <p>American Bobtail Cat Breed</p>
+        </div>
+        <div class="row" style="justify-content: center">
+          <img src="https://i.ibb.co/Lp7Gv6x/american-Bob-Tail.png" style="width: 115%; height: 115%; padding: 10px;">
+        </div>
+      </div>
+    </div> -->
+    <div class="row" style="text-align: center;">
+      <div class="col-sm">
+        <a [routerLink]="['/cats/new']">Found a stray looking for a home? Create a post!</a>
+      </div>
+    </div>
+    <div class="row" style="margin: 1px; padding: 15px;">
+      <div class="table-responsive table-sm shadow-lg w-auto" style="border: 1px solid black; cursor: default; padding-right: 0; border-radius: 8px;">
+        <table class="table table-hover w-auto" style="margin: 0; border-radius: 18px;">
+          <thead>
+            <tr style="/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fac695+0,f5ab66+47,ef8d31+100;Orange+3D+%232 */
+            background: rgb(250,198,149); /* Old browsers */
+            background: -moz-linear-gradient(top, rgba(250,198,149,1) 0%, rgba(245,171,102,1) 47%, rgba(239,141,49,1) 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top, rgba(250,198,149,1) 0%,rgba(245,171,102,1) 47%,rgba(239,141,49,1) 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom, rgba(250,198,149,1) 0%,rgba(245,171,102,1) 47%,rgba(239,141,49,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fac695', endColorstr='#ef8d31',GradientType=0 ); /* IE6-9 */; font-size: 25px; color: whitesmoke; font-size: 17px;">
+              <th scope="col">Breed Name</th>
+              <th scope="col">Age</th>
+              <th scope="col">Gender</th>
+              <th scope="col">Comfortable around other pets/animals?</th>
+              <th scope="col">Comfortable around children/people?</th>
+              <th scope="col">Any known health issues?</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody style="font-size: 17.1px;">
+            <tr *ngFor="let cat of cats">
+              <td>{{cat.breedname}}</td>
+              <td>{{cat.age}}</td>
+              <td>{{cat.gender}}</td>
+              <td>{{cat.comfortablecatdog}}</td>
+              <td>{{cat.comfortablekids}}</td>
+              <td>{{cat.health}}</td>
+              <button style="border: 1.5px solid rgba(0, 164, 240, 0.267); background-color: whitesmoke; border-radius: 23px; font-size: 15px; padding: 5px; margin: 5px;"
+                [routerLink]="['/cats', cat._id]">Details</button>
+              <button style="border: 1.5px solid rgba(255, 217, 0, 0.267); background-color: whitesmoke; border-radius: 23px; font-size: 15px; padding: 5px; margin: 5px;"
+                [routerLink]="['/cats', cat._id, 'edit']">Edit</button>
+              <!-- <button style="border: 1.5px solid rgba(255, 0, 0, 0.226); background-color: whitesmoke; border-radius: 23px; font-size: 15px; padding: 5px; margin: 5px;"
+                [routerLink]="['/cats', cat._id, 'delete']">Delete</button> -->
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <br>
+  </div>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>
