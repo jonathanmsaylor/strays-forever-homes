@@ -3,13 +3,13 @@ var mongoose = require("mongoose");
 var bodyParser = require('body-parser');
 var app = express();
 
-app.use(express.static(__dirname+'/public/dist'));
+app.use(express.static(__dirname+'/dist/public'));
 
 app.use(bodyParser.json());
 
 
-mongoose.connect(process.env.MONGODB_URI);
-// mongoose.connect('mongodb://localhost:27017/cat_questions', {useNewUrlParser: true});
+// mongoose.connect(process.env.MONGODB_URI);
+mongoose.connect('mongodb://localhost:27017/cat_questions', {useNewUrlParser: true});
 
 
 require('./server/config/mongoose.js');

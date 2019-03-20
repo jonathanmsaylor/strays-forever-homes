@@ -3,11 +3,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { HttpService } from '../http.service';
 
 @Component({
-  selector: 'app-breed-question-page',
-  templateUrl: './breed-question-page.component.html',
-  styleUrls: ['./breed-question-page.component.css']
+  selector: 'app-cat-details-page',
+  templateUrl: './cat-details-page.component.html',
+  styleUrls: ['./cat-details-page.component.css']
 })
-export class BreedQuestionPageComponent implements OnInit {
+export class CatDetailsPageComponent implements OnInit {
   cat = { _id: '', breedname: '', age: '', gender: '', comfortablecatdog: '', comfortablekids: '', health: '' };
 
   constructor(private _route: ActivatedRoute, private _httpService: HttpService, private _router: Router, ) { }

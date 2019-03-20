@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EditPageComponent } from './edit-page.component';
+import { CatDetailsPageComponent } from './cat-details-page.component';
 
-describe('EditPageComponent', () => {
-  let component: EditPageComponent;
-  let fixture: ComponentFixture<EditPageComponent>;
+describe('CatDetailsPageComponent', () => {
+  let component: CatDetailsPageComponent;
+  let fixture: ComponentFixture<CatDetailsPageComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ EditPageComponent ]
+      declarations: [ CatDetailsPageComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(EditPageComponent);
+    fixture = TestBed.createComponent(CatDetailsPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

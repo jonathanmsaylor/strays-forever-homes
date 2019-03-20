@@ -3,11 +3,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { HttpService } from '../http.service';
 
 @Component({
-  selector: 'app-edit-page',
-  templateUrl: './edit-page.component.html',
-  styleUrls: ['./edit-page.component.css']
+  selector: 'app-edit-cat-page',
+  templateUrl: './edit-cat-page.component.html',
+  styleUrls: ['./edit-cat-page.component.css']
 })
-export class EditPageComponent implements OnInit {
+export class EditCatPageComponent implements OnInit {
   cat = {_id: '', breedname: '', age: '', gender: '', comfortablecatdog: '', comfortablekids: '', health: ''};
 
 
