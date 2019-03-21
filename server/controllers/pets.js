@@ -2,18 +2,16 @@ var mongoose = require("mongoose");
 var Cat = mongoose.model('Cat');
 var Dog = mongoose.model('Dog');
 
+
 module.exports = {
+    
     index: function (req, res) {
-        console.log('hit index controller');
-        Cat.find({}, function (err, breedname) {
-            if (err) {
-                console.log('got an error at index');
-                res.json(err);
-            } else {
-                console.log('rendered cats');
-                res.json(breedname);
-            }
-        })
+        Promise.all([
+            Cat.find({}).exec(),
+            Dog.find({}).exec()
+          ])
+          .then(([cats, dogs]) => res.json({cats, dogs}))
+          .catch((err) => res.json(err))
     },
     createCat: function (req, res) {
         console.log('hit create');
@@ -131,6 +129,7 @@ module.exports = {
         })
     },
 }
+
 
 
     // delete: (req, res) => {

@@ -9,19 +9,21 @@ import { HttpService } from '../http.service';
 })
 export class HomePageComponent implements OnInit {
   newCat: any;
+  newDog: any;
   cats = [];
   dogs = [];
-  cat = {breedname: ''};
-  dog = {breedname: ''};
+  // cat = {breedname: ''};
+  // dog = {breedname: ''};
 
 
   constructor(private _route: ActivatedRoute, private _httpService: HttpService, private _router: Router, ) { }
 
   ngOnInit() {
     var tempObeservable = this._httpService.getAllPets();
-    tempObeservable.subscribe((data: any) => {
-      console.log('got a response from ngoninit', data);
-      this.cats = data;
+    tempObeservable.subscribe(({ cats, dogs }) => {
+      console.log('got a response from ngoninit', cats, dogs);
+      this.dogs = dogs;
+      this.cats = cats;
     });
   }
   CatDetailsPage() {

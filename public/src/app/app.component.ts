@@ -8,8 +8,9 @@ import { HttpService } from './http.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  newQuestion: any;
-  questions = [];
+  newCat: any;
+  newDog: any;
+  pets = [];
        
   constructor(private _route: ActivatedRoute, private _httpService: HttpService, private _router: Router) { }
 
