@@ -16,6 +16,12 @@
         background-size: cover;
     }
     .parallax {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .parallax {
         /* The image used */
         background-image: url("https://i.ibb.co/8Mx0gsh/cat1.jpg");
         /* Set a specific height */
@@ -28,5 +34,3 @@
         padding: 100px;
     }
 }
-
-@media only screen and (min-width: 768px) {}
