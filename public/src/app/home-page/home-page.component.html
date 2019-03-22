@@ -21,118 +21,155 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
     integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
     crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function () {
+      $("#submitstraycollapse").on("hide.bs.collapse", function () {
+        $(".btn").html('<span class="glyphicon glyphicon-collapse-down"></span> Open');
+      });
+      $("#submitstraycollapse").on("show.bs.collapse", function () {
+        $(".btn").html('<span class="glyphicon glyphicon-collapse-up"></span> Close');
+      });
+    });
+  </script>
 
 </head>
 
 <body>
-  <div class="container" style="text-align: center; background-color: floralwhite;">
+  <div class="container" style="text-align: center; background-color: floralwhite; padding: 0; overflow-x: hidden;">
     <div class="header" [routerLink]="['']">
-      <div class="row shadow-sm" style="text-align: center;  margin-top: 13px; border-bottom: 1px solid black;">
-        <p
-          style="color: rgb(37, 27, 11); padding: 10px; font-size: 45px; margin: 0; font-weight: 500; font-style: italic;">
-          Stray's New Homes</p>
+      <div class="row justify-content-center">
+        <p class="title">
+          A Stray's New Home</p>
       </div>
     </div>
-    <div class="row"
-      style="background-color: rgba(179, 103, 42, 0.267);  border-top: 1px solid black; border-bottom: 1px solid black;">
-      <p
-        style="color: rgb(0, 0, 0); margin-top: 12px; margin-bottom: 12px; padding: 20px; font-size: 25px; font-family: lucida calligraphy;">
-        Uniting stray cats, dogs, puppies and kittens with their new forever homes</p>
+    <div class="row shadow-lg justify-content-center"
+      style="background-color: rgba(179, 103, 42, 0.267);  border-top: 1px solid black; margin-bottom: 11px;">
+      <p class="subtitle">
+        Uniting stray Cats & Dogs with their new forever homes</p>
     </div>
-    <div class="row" style="text-align: center;">
+    <div class="row" style="text-align: center;" id="desktoprow">
       <div class="parallax">
-        <div class="col-sm" style="background-color: salmon; opacity: .8; padding: 10px; border-radius: 10px; border: 1px solid black; box-shadow: 2px 2px 2px black;">
+        <div class="col-sm"
+          style="background-color: salmon; padding: 10px; border-radius: 10px; border: 1px solid black; box-shadow: 2px 2px 2px black;">
           <a [routerLink]="['/cats/new']" style="color: white;">Found a stray Cat looking for a home? Create a post!</a>
         </div>
-        <div class="col-sm" style="background-color: rgb(96, 156, 212); opacity: .8; padding: 10px; border-radius: 10px; border: 1px solid black; box-shadow: 2px 2px 2px black;">
+        <div class="col-sm"
+          style="background-color: rgb(96, 156, 212); padding: 10px; border-radius: 10px; border: 1px solid black; box-shadow: 2px 2px 2px black;">
           <a [routerLink]="['/dogs/new']" style="color: white;">Found a stray Dog looking for a home? Create a post!</a>
         </div>
       </div>
-      <!-- use this for dog picture parallax
-      <div class="parallax"></div> -->
     </div>
-    <div class="row" style="margin: 1px; padding: 15px;">
-      <div class="table-responsive table-sm shadow-lg w-auto"
-        style="border: 1px solid black; cursor: default; padding-right: 0; border-radius: 8px;">
-        <table class="table table-hover w-auto" style="margin: 0; border-radius: 18px;">
-          <thead>Cats
-            <tr
-              style="/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fac695+0,f5ab66+47,ef8d31+100;Orange+3D+%232 */
+    <div data-aos="fade-left" data-aos-offset="200" data-aos-delay="400" data-aos-duration="800"
+      data-aos-easing="ease-in-out">
+      <div class="row" style="margin: 1px; padding: 15px;">
+        <div class="table-responsive table-sm shadow-lg w-auto"
+          style="border: 1px solid black; cursor: default; padding-right: 0; border-radius: 8px;">
+          <table class="table table-hover w-auto" style="margin: 0; border-radius: 18px;">
+            <thead>
+              <h2>Cats</h2>
+              <tr
+                style="/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fac695+0,f5ab66+47,ef8d31+100;Orange+3D+%232 */
             background: rgb(250,198,149); /* Old browsers */
             background: -moz-linear-gradient(top, rgba(250,198,149,1) 0%, rgba(245,171,102,1) 47%, rgba(239,141,49,1) 100%); /* FF3.6-15 */
             background: -webkit-linear-gradient(top, rgba(250,198,149,1) 0%,rgba(245,171,102,1) 47%,rgba(239,141,49,1) 100%); /* Chrome10-25,Safari5.1-6 */
             background: linear-gradient(to bottom, rgba(250,198,149,1) 0%,rgba(245,171,102,1) 47%,rgba(239,141,49,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
             filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fac695', endColorstr='#ef8d31',GradientType=0 ); /* IE6-9 */; font-size: 25px; color: whitesmoke; font-size: 17px;">
-              <th scope="col">Breed Name</th>
-              <th scope="col">Age</th>
-              <th scope="col">Gender</th>
-              <th scope="col">Comfortable around other pets/animals?</th>
-              <th scope="col">Comfortable around children/people?</th>
-              <th scope="col">Any known health issues?</th>
-              <th scope="col">Actions</th>
-            </tr>
-          </thead>
-          <tbody style="font-size: 17.1px;">
-            <tr *ngFor="let cat of cats">
-              <td>{{cat.breedname}}</td>
-              <td>{{cat.age}}</td>
-              <td>{{cat.gender}}</td>
-              <td>{{cat.comfortablecatdog}}</td>
-              <td>{{cat.comfortablekids}}</td>
-              <td>{{cat.health}}</td>
-              <button
-                style="border: 1.5px solid rgba(0, 164, 240, 0.267); background-color: whitesmoke; border-radius: 23px; font-size: 15px; padding: 5px; margin: 5px;"
-                [routerLink]="['/cats', cat._id]">Details</button>
-              <button
-                style="border: 1.5px solid rgba(255, 217, 0, 0.267); background-color: whitesmoke; border-radius: 23px; font-size: 15px; padding: 5px; margin: 5px;"
-                [routerLink]="['/cats', cat._id, 'edit']">Edit</button>
-              <!-- <button style="border: 1.5px solid rgba(255, 0, 0, 0.226); background-color: whitesmoke; border-radius: 23px; font-size: 15px; padding: 5px; margin: 5px;"
+                <th scope="col">Breed Name</th>
+                <th scope="col">Age</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Comfortable around other pets/animals?</th>
+                <th scope="col">Comfortable around children/people?</th>
+                <th scope="col">Any known health issues?</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            <tbody style="font-size: 17.1px;">
+              <tr *ngFor="let cat of cats">
+                <td>{{cat.breedname}}</td>
+                <td>{{cat.age}}</td>
+                <td>{{cat.gender}}</td>
+                <td>{{cat.comfortablecatdog}}</td>
+                <td>{{cat.comfortablekids}}</td>
+                <td>{{cat.health}}</td>
+                <button
+                  style="border: 1.5px solid rgba(0, 164, 240, 0.267); background-color: whitesmoke; border-radius: 23px; font-size: 15px; padding: 5px; margin: 5px;"
+                  [routerLink]="['/cats', cat._id]">Details</button>
+                <button
+                  style="border: 1.5px solid rgba(255, 217, 0, 0.267); background-color: whitesmoke; border-radius: 23px; font-size: 15px; padding: 5px; margin: 5px;"
+                  [routerLink]="['/cats', cat._id, 'edit']">Edit</button>
+                <!-- <button style="border: 1.5px solid rgba(255, 0, 0, 0.226); background-color: whitesmoke; border-radius: 23px; font-size: 15px; padding: 5px; margin: 5px;"
                 [routerLink]="['/cats', cat._id, 'delete']">Delete</button> -->
-            </tr>
-          </tbody>
-        </table>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
-    <div class="row" style="margin: 1px; padding: 15px;">
-      <div class="table-responsive table-sm shadow-lg w-auto"
-        style="border: 1px solid black; cursor: default; padding-right: 0; border-radius: 8px;">
-        <table class="table table-hover w-auto" style="margin: 0; border-radius: 18px;">
-          <thead>Dogs
-            <tr
-              style="/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fac695+0,f5ab66+47,ef8d31+100;Orange+3D+%232 */
+    <div data-aos="fade-right" data-aos-offset="100" data-aos-delay="200" data-aos-duration="500"
+      data-aos-easing="ease-in-out">
+      <div class="row" style="margin: 1px; padding: 15px;">
+        <div class="table-responsive table-sm shadow-lg w-auto"
+          style="border: 1px solid black; cursor: default; padding-right: 0; border-radius: 8px;">
+          <table class="table table-hover w-auto" style="margin: 0; border-radius: 18px;">
+            <thead>
+              <h2>Dogs</h2>
+              <tr
+                style="/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fac695+0,f5ab66+47,ef8d31+100;Orange+3D+%232 */
             background: rgb(250,198,149); /* Old browsers */
             background: -moz-linear-gradient(top, rgba(250,198,149,1) 0%, rgba(245,171,102,1) 47%, rgba(239,141,49,1) 100%); /* FF3.6-15 */
             background: -webkit-linear-gradient(top, rgba(250,198,149,1) 0%,rgba(245,171,102,1) 47%,rgba(239,141,49,1) 100%); /* Chrome10-25,Safari5.1-6 */
             background: linear-gradient(to bottom, rgba(250,198,149,1) 0%,rgba(245,171,102,1) 47%,rgba(239,141,49,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
             filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fac695', endColorstr='#ef8d31',GradientType=0 ); /* IE6-9 */; font-size: 25px; color: whitesmoke; font-size: 17px;">
-              <th scope="col">Breed Name</th>
-              <th scope="col">Age</th>
-              <th scope="col">Gender</th>
-              <th scope="col">Comfortable around other pets/animals?</th>
-              <th scope="col">Comfortable around children/people?</th>
-              <th scope="col">Any known health issues?</th>
-              <th scope="col">Actions</th>
-            </tr>
-          </thead>
-          <tbody style="font-size: 17.1px;">
-            <tr *ngFor="let dog of dogs">
-              <td>{{dog.breedname}}</td>
-              <td>{{dog.age}}</td>
-              <td>{{dog.gender}}</td>
-              <td>{{dog.comfortablecatdog}}</td>
-              <td>{{dog.comfortablekids}}</td>
-              <td>{{dog.health}}</td>
-              <button
-                style="border: 1.5px solid rgba(0, 164, 240, 0.267); background-color: whitesmoke; border-radius: 23px; font-size: 15px; padding: 5px; margin: 5px;"
-                [routerLink]="['/dogs', dog._id]">Details</button>
-              <button
-                style="border: 1.5px solid rgba(255, 217, 0, 0.267); background-color: whitesmoke; border-radius: 23px; font-size: 15px; padding: 5px; margin: 5px;"
-                [routerLink]="['/dogs', dog._id, 'edit']">Edit</button>
-              <!-- <button style="border: 1.5px solid rgba(255, 0, 0, 0.226); background-color: whitesmoke; border-radius: 23px; font-size: 15px; padding: 5px; margin: 5px;"
+                <th scope="col">Breed Name</th>
+                <th scope="col">Age</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Comfortable around other pets/animals?</th>
+                <th scope="col">Comfortable around children/people?</th>
+                <th scope="col">Any known health issues?</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            <tbody style="font-size: 17.1px;">
+              <tr *ngFor="let dog of dogs">
+                <td>{{dog.breedname}}</td>
+                <td>{{dog.age}}</td>
+                <td>{{dog.gender}}</td>
+                <td>{{dog.comfortablecatdog}}</td>
+                <td>{{dog.comfortablekids}}</td>
+                <td>{{dog.health}}</td>
+                <button
+                  style="border: 1.5px solid rgba(0, 164, 240, 0.267); background-color: whitesmoke; border-radius: 23px; font-size: 15px; padding: 5px; margin: 5px;"
+                  [routerLink]="['/dogs', dog._id]">Details</button>
+                <button
+                  style="border: 1.5px solid rgba(255, 217, 0, 0.267); background-color: whitesmoke; border-radius: 23px; font-size: 15px; padding: 5px; margin: 5px;"
+                  [routerLink]="['/dogs', dog._id, 'edit']">Edit</button>
+                <!-- <button style="border: 1.5px solid rgba(255, 0, 0, 0.226); background-color: whitesmoke; border-radius: 23px; font-size: 15px; padding: 5px; margin: 5px;"
                 [routerLink]="['/dogs', dog._id, 'delete']">Delete</button> -->
-            </tr>
-          </tbody>
-        </table>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div data-aos="fade" data-aos-offset="0" data-aos-delay="400" data-aos-duration="1000"
+      data-aos-easing="ease-in-out">
+      <div class="container">
+        <button type="button"
+          style="background-color: rgba(0, 0, 112, 0.39); border: 1px solid black; box-shadow: 2px 2px 2px grey;"
+          class="btn btn-success" data-toggle="collapse" data-target="#submitstraycollapse">
+          <span class="glyphicon glyphicon-collapse-down"></span>
+          <p style="margin: 0;">Do you have a Cat or Dog looking for a home? Create a post!</p>
+        </button>
+        <div id="submitstraycollapse" class="collapse">
+          <div class="row" style="text-align: center;" id="mobilerow">
+            <div class="col-sm" id="catdogbuttonone">
+              <a [routerLink]="['/cats/new']" style="color: white;">I have a Cat</a>
+            </div>
+            <div class="col-sm" id="catdogbuttontwo">
+              <a [routerLink]="['/dogs/new']" style="color: white;">I have a Dog</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <br>
