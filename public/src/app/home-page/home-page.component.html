@@ -24,14 +24,13 @@
   <script>
     $(document).ready(function () {
       $("#submitstraycollapse").on("hide.bs.collapse", function () {
-        $(".btn").html('<span class="glyphicon glyphicon-collapse-down"></span> Open');
+        $(".btn").html('<span class="glyphicon glyphicon-collapse-down"></span> Are you looking to find a stray a new home? Create a post!');
       });
       $("#submitstraycollapse").on("show.bs.collapse", function () {
         $(".btn").html('<span class="glyphicon glyphicon-collapse-up"></span> Close');
       });
     });
   </script>
-
 </head>
 
 <body>
@@ -43,22 +42,11 @@
       </div>
     </div>
     <div class="row shadow-lg justify-content-center"
-      style="background-color: rgba(179, 103, 42, 0.267);  border-top: 1px solid black; margin-bottom: 11px;">
+      style="background-color: rgba(179, 103, 42, 0.267); border: 1px solid black; margin-bottom: 11px;">
       <p class="subtitle">
         Uniting stray Cats & Dogs with their new forever homes</p>
     </div>
-    <div class="row" style="text-align: center;" id="desktoprow">
-      <div class="parallax">
-        <div class="col-sm"
-          style="background-color: salmon; padding: 10px; border-radius: 10px; border: 1px solid black; box-shadow: 2px 2px 2px black;">
-          <a [routerLink]="['/cats/new']" style="color: white;">Found a stray Cat looking for a home? Create a post!</a>
-        </div>
-        <div class="col-sm"
-          style="background-color: rgb(96, 156, 212); padding: 10px; border-radius: 10px; border: 1px solid black; box-shadow: 2px 2px 2px black;">
-          <a [routerLink]="['/dogs/new']" style="color: white;">Found a stray Dog looking for a home? Create a post!</a>
-        </div>
-      </div>
-    </div>
+
     <div data-aos="fade-left" data-aos-offset="200" data-aos-delay="400" data-aos-duration="800"
       data-aos-easing="ease-in-out">
       <div class="row" style="margin: 1px; padding: 15px;">
@@ -66,7 +54,7 @@
           style="border: 1px solid black; cursor: default; padding-right: 0; border-radius: 8px;">
           <table class="table table-hover w-auto" style="margin: 0; border-radius: 18px;">
             <thead>
-              <h2>Cats</h2>
+              <h2 style="margin: 0; padding: 10px; padding-right: 40px; font-family: bauhus;">Cats</h2>
               <tr
                 style="/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fac695+0,f5ab66+47,ef8d31+100;Orange+3D+%232 */
             background: rgb(250,198,149); /* Old browsers */
@@ -105,14 +93,14 @@
         </div>
       </div>
     </div>
-    <div data-aos="fade-right" data-aos-offset="100" data-aos-delay="200" data-aos-duration="500"
-      data-aos-easing="ease-in-out">
+    <hr>
+    <div data-aos="fade-right" data-aos-delay="200" data-aos-duration="800" data-aos-easing="ease-in-out">
       <div class="row" style="margin: 1px; padding: 15px;">
         <div class="table-responsive table-sm shadow-lg w-auto"
           style="border: 1px solid black; cursor: default; padding-right: 0; border-radius: 8px;">
           <table class="table table-hover w-auto" style="margin: 0; border-radius: 18px;">
             <thead>
-              <h2>Dogs</h2>
+              <h2 style="margin: 0; padding: 10px; padding-right: 40px; font-family: bauhus;">Dogs</h2>
               <tr
                 style="/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fac695+0,f5ab66+47,ef8d31+100;Orange+3D+%232 */
             background: rgb(250,198,149); /* Old browsers */
@@ -155,24 +143,27 @@
       data-aos-easing="ease-in-out">
       <div class="container">
         <button type="button"
-          style="background-color: rgba(0, 0, 112, 0.39); border: 1px solid black; box-shadow: 2px 2px 2px grey;"
+          style="border: none; background: rgb(246,230,180); /* Old browsers */
+        background: -moz-linear-gradient(top, rgba(246,230,180,1) 0%, rgba(237,144,23,1) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(246,230,180,1) 0%,rgba(237,144,23,1) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(246,230,180,1) 0%,rgba(237,144,23,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6e6b4', endColorstr='#ed9017',GradientType=0 ); box-shadow: 2px 2px 2px rgb(202, 202, 202); margin: 20px;"
           class="btn btn-success" data-toggle="collapse" data-target="#submitstraycollapse">
           <span class="glyphicon glyphicon-collapse-down"></span>
-          <p style="margin: 0;">Do you have a Cat or Dog looking for a home? Create a post!</p>
+          <p style="margin: 0; color: rgb(0, 0, 0);">Are you looking to find a stray a new home? Create a post!</p>
         </button>
         <div id="submitstraycollapse" class="collapse">
           <div class="row" style="text-align: center;" id="mobilerow">
             <div class="col-sm" id="catdogbuttonone">
-              <a [routerLink]="['/cats/new']" style="color: white;">I have a Cat</a>
+              <a [routerLink]="['/cats/new']" style="color: white; border-radius: 100px; width: 50%;">I have a Cat</a>
             </div>
             <div class="col-sm" id="catdogbuttontwo">
-              <a [routerLink]="['/dogs/new']" style="color: white;">I have a Dog</a>
+              <a [routerLink]="['/dogs/new']" style="color: white; border-radius: 100px; width: 50%;">I have a Dog</a>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <br>
   </div>
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
