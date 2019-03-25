@@ -4,14 +4,14 @@ var Dog = mongoose.model('Dog');
 
 
 module.exports = {
-    
+
     index: function (req, res) {
         Promise.all([
             Cat.find({}).exec(),
             Dog.find({}).exec()
-          ])
-          .then(([cats, dogs]) => res.json({cats, dogs}))
-          .catch((err) => res.json(err))
+        ])
+            .then(([cats, dogs]) => res.json({ cats, dogs }))
+            .catch((err) => res.json(err))
     },
     createCat: function (req, res) {
         console.log('hit create');
@@ -69,7 +69,7 @@ module.exports = {
         });
     },
     showDogBreedName: function (req, res) {
-        Cat.findOne({ _id: req.params._id }, function (err, breedname) {
+        Dog.findOne({ _id: req.params._id }, function (err, breedname) {
             if (err) {
                 console.log('got errors from showdogbreedname');
                 res.json(err);
@@ -128,17 +128,27 @@ module.exports = {
             })
         })
     },
+    deleteDog: (req, res) => {
+        Dog.deleteOne({ _id: req.params.id }, function (err) {
+            if (err) {
+                console.log("hit delete but got errors", err);
+                res.json(err);
+            } else {
+                res.json({ message: 'succesfully deleted' });
+            }
+        })
+    },
+    deleteCat: (req, res) => {
+        Cat.deleteOne({ _id: req.params.id }, function (err) {
+            if (err) {
+                console.log("hit delete but got errors", err);
+                res.json(err);
+            } else {
+                res.json({ message: 'succesfully deleted' });
+            }
+        })
+    }
 }
 
 
 
-    // delete: (req, res) => {
-    //     Question.deleteOne({ _id: req.params.id }, function (err) {
-    //         if (err) {
-    //             console.log("hit delete but got errors", err);
-    //             res.json(err);
-    //         } else {
-    //             res.json({message: 'succesfully deleted'});
-    //         }
-    //     })
-    // },

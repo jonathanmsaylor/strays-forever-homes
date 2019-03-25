@@ -49,15 +49,26 @@ export class HomePageComponent implements OnInit {
     })
   }
 
-  // removeQuestion(_id) {
-  //   var tempObeservable = this._httpService.removeQuestionById(_id);
-  //   tempObeservable.subscribe((data: any) => {
-  //     console.log('got a response from delete');
-  //     var tempObeservable = this._httpService.getAllQuestions();
-  //     tempObeservable.subscribe((data: any) => {
-  //       console.log('got a response from ngoninit', data);
-  //       this.cats = data;
-  //     })
-  //   })
-  // }
+  removeDog(_id) {
+    var tempObeservable = this._httpService.removeDogById(_id);
+    tempObeservable.subscribe((data: any) => {
+      console.log('got a response from delete');
+      var tempObeservable = this._httpService.getAllPets();
+      tempObeservable.subscribe((data: any) => {
+        console.log('got a response from ngoninit', data);
+        this.dogs = data;
+      })
+    })
+  }
+  removeCat(_id) {
+    var tempObeservable = this._httpService.removeCatById(_id);
+    tempObeservable.subscribe((data: any) => {
+      console.log('got a response from delete');
+      var tempObeservable = this._httpService.getAllPets();
+      tempObeservable.subscribe((data: any) => {
+        console.log('got a response from ngoninit', data);
+        this.cats = data;
+      })
+    })
+  }
 }

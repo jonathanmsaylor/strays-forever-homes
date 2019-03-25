@@ -21,8 +21,8 @@ const routes: Routes = [
   {path: 'dogs/:id/edit', component: EditDogPageComponent},
   {path: 'dogs/:id/postpet', component: HomePageComponent},
   {path: 'dogs/:id/update', component: HomePageComponent},
-  // {path: 'cats/:id/deletecat', component: HomePageComponent},
-  // {path: 'dogs/:id/deletedog', component: HomePageComponent},
+  {path: 'cats/:id/deletecat', component: HomePageComponent},
+  {path: 'dogs/:id/deletedog', component: HomePageComponent},
 ];
 
 @NgModule({

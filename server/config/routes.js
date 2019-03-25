@@ -11,11 +11,11 @@ module.exports = function(app){
     app.post('/api/pets/:id/updatecat', pets.updateCat);
     app.get('/api/pets/:id/editdog', pets.editDog);
     app.post('/api/pets/:id/updatedog', pets.updateDog);
-    // app.post('/api/pets/:id/deletecat', pets.deleteCat);
-    // app.post('/api/pets/:id/deleteDog', pets.deleteDog);
+    app.delete('/api/pets/:id/deletecat', pets.deleteCat);
+    app.post('/api/pets/:id/deletedog', pets.deleteDog);
 
 
     app.all("*", (req, res, next) => {
-        res.sendFile(path.resolve("./public/dist/public/index.html"))
+        res.sendFile(path.resolve("./dist/public/index.html"))
     });
 }

@@ -3,7 +3,7 @@ var mongoose = require("mongoose");
 var bodyParser = require('body-parser');
 var app = express();
 
-app.use(express.static(__dirname+'/dist/public'));
+app.use(express.static('./dist/public'));
 
 app.use(bodyParser.json());
 
