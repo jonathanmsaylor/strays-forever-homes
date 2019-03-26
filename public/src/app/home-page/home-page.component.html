@@ -24,10 +24,10 @@
   <script>
     $(document).ready(function () {
       $("#submitstraycollapse").on("hide.bs.collapse", function () {
-        $(".btn").html('<span class="glyphicon glyphicon-collapse-down"></span> Are you looking to find a stray a new home? Create a post!');
+        $(".btn").html('<span class="glyphicon glyphicon-collapse-down"></span> Have you found a stray? Create a post!');
       });
       $("#submitstraycollapse").on("show.bs.collapse", function () {
-        $(".btn").html('<span class="glyphicon glyphicon-collapse-up"></span> Are you looking to find a stray a new home? Create a post!');
+        $(".btn").html('<span class="glyphicon glyphicon-collapse-up"></span> Have you found a stray? Create a post!');
       });
     });
   </script>
@@ -42,31 +42,35 @@
       </div>
     </div>
     <div class="row shadow-lg justify-content-center"
-      style="background-color: rgba(179, 103, 42, 0.267); border: 1px solid black; margin-bottom: 11px;">
+      style="background-color: rgba(179, 103, 42, 0.267); border-top: 1px solid black;">
       <p class="subtitle">
         Uniting stray Cats & Dogs with their new forever homes</p>
     </div>
     <div class="container">
       <button type="button"
-        style="border: none; background: rgb(246,230,180); /* Old browsers */
+        style="border: 1px solid grey; background: rgb(246,230,180); /* Old browsers */
       background: -moz-linear-gradient(top, rgba(246,230,180,1) 0%, rgba(237,144,23,1) 100%); /* FF3.6-15 */
       background: -webkit-linear-gradient(top, rgba(246,230,180,1) 0%,rgba(237,144,23,1) 100%); /* Chrome10-25,Safari5.1-6 */
       background: linear-gradient(to bottom, rgba(246,230,180,1) 0%,rgba(237,144,23,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6e6b4', endColorstr='#ed9017',GradientType=0 ); box-shadow: 2px 2px 2px rgb(202, 202, 202); margin: 20px;"
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6e6b4', endColorstr='#ed9017',GradientType=0 ); box-shadow: 2px 2px 2px rgb(202, 202, 202); margin: 20px; margin-top: 60px; margin-bottom: 60px;"
         class="btn btn-success" data-toggle="collapse" data-target="#submitstraycollapse">
         <span class="glyphicon glyphicon-collapse-down"></span>
-        <p style="margin: 0; color: rgb(0, 0, 0);">Are you looking to find a stray a new home? Create a post!</p>
+        <p style="margin: 0; font-size: 15px; padding: 14px;">Have you found a stray? Create a post!</p>
       </button>
       <div id="submitstraycollapse" class="collapse">
         <div class="row" style="text-align: center;" id="mobilerow">
           <div class="col-sm" id="catdogbuttonone">
-            <a [routerLink]="['/cats/new']" style="color: white;">I have a Cat</a>
+            <a [routerLink]="['/cats/new']" style="color: white; border-radius: 100px; width: 50%;">I have a Cat</a>
           </div>
           <div class="col-sm" id="catdogbuttontwo">
             <a [routerLink]="['/dogs/new']" style="color: white; border-radius: 100px; width: 50%;">I have a Dog</a>
           </div>
         </div>
       </div>
+    </div>
+    <div class="row shadow-lg"
+      style="border: 1px solid black; padding: 32px; margin-bottom: 42px; background-color: rgba(194, 138, 55, 0.185);">
+      <h4 style="margin: 0; ">Check out the tables below to see the current Cats and Dogs waiting for a loving home</h4>
     </div>
     <div data-aos="fade-left" data-aos-offset="200" data-aos-delay="400" data-aos-duration="800"
       data-aos-easing="ease-in-out">
@@ -106,14 +110,16 @@
                 <button
                   style="border: 1.5px solid rgba(255, 217, 0, 0.267); background-color: whitesmoke; border-radius: 23px; font-size: 15px; padding: 5px; margin: 5px;"
                   [routerLink]="['/cats', cat._id, 'edit']">Edit</button>
-                <button style="border: 1.5px solid rgba(255, 0, 0, 0.226); background-color: whitesmoke; border-radius: 23px; font-size: 15px; padding: 5px; margin: 5px;"
-                (click)="removeCat(cat._id)">Delete</button>
+                <button
+                  style="border: 1.5px solid rgba(255, 0, 0, 0.226); background-color: whitesmoke; border-radius: 23px; font-size: 15px; padding: 5px; margin: 5px;"
+                  (click)="removeCat(cat._id)">Adopt!</button>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
     </div>
+    <hr>
     <hr>
     <div data-aos="fade-right" data-aos-delay="0" data-aos-duration="800" data-aos-easing="ease-in-out">
       <div class="row" style="margin: 1px; padding: 15px;">
@@ -154,13 +160,20 @@
                   [routerLink]="['/dogs', dog._id, 'edit']">Edit</button>
                 <button
                   style="border: 1.5px solid rgba(255, 0, 0, 0.226); background-color: whitesmoke; border-radius: 23px; font-size: 15px; padding: 5px; margin: 5px;"
-                  (click)="removeDog(dog._id)">Delete</button>
+                  (click)="removeDog(dog._id)">Adopt!</button>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
     </div>
+    <br>
+    <br>
+    <!-- <hr> -->
+    <!-- <footer>
+      <p class="txt-railway"> <button
+        [routerLink]="['/about]">- About -</button></p>
+    </footer> -->
   </div>
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
