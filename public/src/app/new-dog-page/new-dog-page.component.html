@@ -24,18 +24,20 @@
 <body>
   <div class="container" style="text-align: center; justify-content: center; padding: 30px; border: 1px solid black;">
     <a [routerLink]="['/']">Home</a>
-    <p>Create a new post for a stray dog</p>
     <div data-aos="fade-up" data-aos-offset="100" data-aos-delay="120" data-aos-duration="1000" data-aos-easing="ease-in-out">
       <div class="container shadow-lg">
         <div class="row justify-content-center align-items-center" style="margin-top: 10%; padding: 5%;">
-          <h5>Unsure of some of the questions? No worries! You can leave those fields blank for the time being.</h5>
+          <h4>Don't worry if you're unsure of any of this information, just give your best guess. You can always go back and edit your post later on!</h4>
         </div>
         <div class="row justify-content-center align-items-center" style="padding-bottom: 5%;">
           <form (submit)="createDog()">
             <table>
               <thead>
                 <p>Breed Name:
-                  <select type="text" name="name" [(ngModel)]="newDog.breedname" style="background-color: rgba(218, 218, 218, 0.151); width: 50%;">
+                  <select type="text" name="name" [(ngModel)]="newDog.breedname" style="background-color: rgba(218, 218, 218, 0.582); width: 50%;">
+                    <option value="unsure">Unsure</option>
+                    <hr>
+                    <hr>
                     <option value="siamese">Abyssinian</option>
                     <option value="americanbobtail">American Bobtail</option>
                     <option value="americancurl">American Curl</option>
@@ -84,16 +86,17 @@
                   </select>
                 </p>
                 <p>Age:
-                  <input type="number" name="age" [(ngModel)]="newDog.age" style="background-color: rgba(231, 231, 231, 0.151); width: 50%;">
+                  <input type="number" name="age" [(ngModel)]="newDog.age" style="background-color: rgba(218, 218, 218, 0.582); width: 50%;">
                 </p>
                 <p>Gender:
-                  <select type="text" name="gender" [(ngModel)]="newDog.gender" style="background-color: rgba(231, 231, 231, 0.151); width: 50%;">
+                  <select type="text" name="gender" [(ngModel)]="newDog.gender" style="background-color: rgba(218, 218, 218, 0.582); width: 50%;">
                     <option value="male">Male</option>
                     <option value="female">Female</option>
+                    <option value="unsure">Unsure</option>
                   </select>
                 </p>
                 <p>Comfortable around dogs, cats, or both:
-                  <select type="text" name="comfortablecatdog" [(ngModel)]="newDog.comfortablecatdog" style="background-color: rgba(231, 231, 231, 0.151); width: 50%;">
+                  <select type="text" name="comfortablecatdog" [(ngModel)]="newDog.comfortablecatdog" style="background-color: rgba(218, 218, 218, 0.582); width: 50%;">
                     <option value="dogs">Dogs</option>
                     <option value="cats">Cats</option>
                     <option value="both">Both</option>
@@ -101,14 +104,14 @@
                   </select>
                 </p>
                 <p>Comfortable around children:
-                  <select type="text" name="comfortablekids" [(ngModel)]="newDog.comfortablekids" style="background-color: rgba(231, 231, 231, 0.151); width: 50%;">
+                  <select type="text" name="comfortablekids" [(ngModel)]="newDog.comfortablekids" style="background-color: rgba(218, 218, 218, 0.582); width: 50%;">
                     <option value="yes">Yes</option>
                     <option value="no">No</option>
                     <option value="unsure">Unsure</option>
                   </select>
                 </p>
                 <p>Is this breed of dog known to have any health issues:
-                  <select type="text" name="health" [(ngModel)]="newDog.health" style="background-color: rgba(231, 231, 231, 0.151); width: 50%;">
+                  <select type="text" name="health" [(ngModel)]="newDog.health" style="background-color: rgba(218, 218, 218, 0.582); width: 50%;">
                     <option value="yes">Yes</option>
                     <option value="no">No</option>
                     <option value="unsure">Unsure</option>

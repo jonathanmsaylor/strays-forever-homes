@@ -108,7 +108,7 @@ module.exports = {
         console.log('req.params', req.params);
         Dog.findOne({ _id: req.params.id }, function (err, dog) {
             console.log('hit update', err);
-            console.log('dog', cat);
+            console.log('dog', dog);
             var updatedDog = new Dog(req.body);
             dog.breedname = req.body.breedname
             dog.age = req.body.age

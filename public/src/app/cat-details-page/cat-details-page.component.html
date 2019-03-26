@@ -26,7 +26,6 @@
     <div class="container" style="text-align: center; padding: 15px;">
       <h4>{{cat.breedname}}</h4>
       <a [routerLink]="['/']">Home</a>
-      <form (submit)="updateCat()">
         <table>
           <thead>
             <p>Age: {{cat.age}}
@@ -44,8 +43,6 @@
             </p>
           </thead>
         </table>
-        <input type="submit">
-      </form>
     </div>
   </div>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
