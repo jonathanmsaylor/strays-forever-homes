@@ -73,7 +73,7 @@
     }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 700px) {
     .parallax {
         /* The image used */
         background-image: url("https://i.ibb.co/8Mx0gsh/cat1.jpg");
@@ -93,10 +93,16 @@
         display: initial;
         margin: 0;
     }
+    .header {
+        background: url(https://i.ibb.co/YkPrGNH/catdogheader.jpg);
+        background-size: cover;
+        padding-bottom: 200px;
+        background-color: rgba(128, 128, 128, 0.479);
+    }
     .title {
         color: rgb(232, 219, 208);
         padding-top: 10px;
-        font-size: 35px;
+        font-size: 70px;
         letter-spacing: 2px;
         padding-left: 2px;
         width: 100%;
@@ -117,8 +123,8 @@
         color: rgb(0, 0, 0);
         margin-top: 12px;
         margin-bottom: 12px;
-        font-size: 15px;
-        font-family: bauhus;
+        font-size: 20px;
+        font-family: cursive;
         padding: 10px;
         padding-right: 12px;
     }
@@ -135,9 +141,9 @@
         box-shadow: 2px 2px 2px black;
     }
     #catdogbuttonone, #catdogbuttontwo {
-        margin: 20px;
+        margin: auto;
+        margin-bottom: 20px;
         border-radius: 100px;
-        width: 50%;
     }
     .table th {
         border-top: 0;
@@ -145,11 +151,5 @@
     }
     .table-sm td, .table-sm th {
         padding: 2rem;
-    }
-    .header {
-        background: url(https://i.ibb.co/YkPrGNH/catdogheader.jpg);
-        background-size: cover;
-        padding-bottom: 100px;
-        background-color: rgba(128, 128, 128, 0.479);
     }
 }

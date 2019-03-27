@@ -34,7 +34,7 @@
 </head>
 
 <body>
-  <div class="container" style="text-align: center; background-color: floralwhite; padding: 0; overflow-x: hidden;">
+  <div class="container-fluid" style="text-align: center; background-color: floralwhite; padding: 0; overflow-x: hidden;">
     <div class="header" [routerLink]="['']">
       <div class="row justify-content-center">
         <p class="title">
@@ -55,7 +55,7 @@
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6e6b4', endColorstr='#ed9017',GradientType=0 ); box-shadow: 2px 2px 2px rgb(202, 202, 202); margin: 20px; margin-top: 60px; margin-bottom: 60px;"
         class="btn btn-success" data-toggle="collapse" data-target="#submitstraycollapse">
         <span class="glyphicon glyphicon-collapse-down"></span>
-        <p style="margin: 0; font-size: 15px; padding: 14px;">Have you found a stray? Create a post!</p>
+        <p style="margin: 0; font-size: 15px; padding: 10px;">Have you found a stray? Create a post!</p>
       </button>
       <div id="submitstraycollapse" class="collapse">
         <div class="row" style="text-align: center;" id="mobilerow">
@@ -68,10 +68,10 @@
         </div>
         <div class="row" style="text-align: center;" id="desktoprow">
           <div class="col-sm" id="catdogbuttonone">
-            <a [routerLink]="['/cats/new']" style="color: white; border-radius: 100px; width: 50%;">I have a Cat</a>
+            <a [routerLink]="['/cats/new']" style="color: white; border-radius: 100px;">I have a Cat</a>
           </div>
           <div class="col-sm" id="catdogbuttontwo">
-            <a [routerLink]="['/dogs/new']" style="color: white; border-radius: 100px; width: 50%;">I have a Dog</a>
+            <a [routerLink]="['/dogs/new']" style="color: white; border-radius: 100px;">I have a Dog</a>
           </div>
         </div>
       </div>
@@ -87,7 +87,7 @@
           style="border: 1px solid black; cursor: default; padding-right: 0; border-radius: 8px;">
           <table class="table table-hover w-auto" style="margin: 0; border-radius: 18px;">
             <thead>
-              <h2 style="margin: 0; padding: 10px; padding-right: 40px; font-family: bauhus;">Cats</h2>
+              <h2 style="margin: 0; padding: 10px; padding-right: 100px; font-family: bauhus;">Cats</h2>
               <tr
                 style="/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fac695+0,f5ab66+47,ef8d31+100;Orange+3D+%232 */
             background: rgb(250,198,149); /* Old browsers */
@@ -135,7 +135,7 @@
           style="border: 1px solid black; cursor: default; padding-right: 0; border-radius: 8px;">
           <table class="table table-hover w-auto" style="margin: 0; border-radius: 18px;">
             <thead>
-              <h2 style="margin: 0; padding: 10px; padding-right: 40px; font-family: bauhus;">Dogs</h2>
+              <h2 style="margin: 0; padding: 10px; padding-right: 20px; font-family: bauhus;">Dogs</h2>
               <tr
                 style="/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fac695+0,f5ab66+47,ef8d31+100;Orange+3D+%232 */
             background: rgb(250,198,149); /* Old browsers */
