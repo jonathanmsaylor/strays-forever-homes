@@ -83,178 +83,175 @@
     </div>
   </div>
   <div class="container">
-      <p>Create a Dog post</p>
-          <h4>Don't worry if you're unsure of any of this information, just give your best guess. You can always go back
-            and edit your post later on.</h4>
-        <div class="row justify-content-center align-items-center" style="padding-bottom: 5%;">
-          <form (submit)="createDog()">
-            <table>
-              <thead>
-                <p class="questiontitle">Breed Name:</p>
-                <select class="select" type="text" name="name" [(ngModel)]="newDog.breedname">
-                  <option value="unsure">Unsure</option>
-                  <option value="siamese">Affenpinscher</option>
-                  <option value="americanbobtail">Afghan Hound</option>
-                  <option value="americancurl">American Curl</option>
-                  <option value="americanshorthair">Airedale Terrier </option>
-                  <option value="americanwirehair"> Akita</option>
-                  <option value="balinesejavanese">Alaskan Malamute</option>
-                  <option value="bengal">American English Coonhound</option>
-                  <option value="birman">American Eskimo Dog</option>
-                  <option value="bombay">American Foxhound</option>
-                  <option value="britishshorthair">American Staffordshire Terrier </option>
-                  <option value="burmese">American Water Spaniel</option>
-                  <option value="chartreux">Anatolian Shepherd Dog</option>
-                  <option value="cornishrex">Australian Cattle Dog </option>
-                  <option value="devonrex">Australian Shepherd</option>
-                  <option value="egyptianmau">Australian Terrier </option>
-                  <option value="europeanburmese"> Basenji</option>
-                  <option value="exoticshorthair"> Basset Hound</option>
-                  <option value="havanabrown">Beagle </option>
-                  <option value="himalayan">Bearded Collie</option>
-                  <option value="japanesebobtail"> Beauceron</option>
-                  <option value="korat">Bedlington Terrier</option>
-                  <option value="laperm">Belgian Malinois</option>
-                  <option value="maincoon"> Belgian Sheepdog</option>
-                  <option value="manx">Belgian Tervuren</option>
-                  <option value="norwegianforest">Bergamasco </option>
-                  <option value="ocicat">Berger Picard</option>
-                  <option value="oriental">Bernese Mountain Dog</option>
-                  <option value="persian">Bichon Frise</option>
-                  <option value="peterbald">Black and Tan Coonhound</option>
-                  <option value="pixiebob">Black Russian Terrier</option>
-                  <option value="ragamuffin">Bloodhound</option>
-                  <option value="ragdoll">Bluetick Coonhound</option>
-                  <option value="russianblue"> </option>
-                  <option value="savannah"></option>
-                  <option value="scottishfold"> </option>
-                  <option value="selkirkrex"> </option>
-                  <option value="siamese"></option>
-                  <option value="siberian"></option>
-                  <option value="singapura"></option>
-                  <option value="somali"></option>
-                  <option value="sphynx"></option>
-                  <option value="tonkinese"></option>
-                  <option value="toyger"></option>
-                  <option value="turkishangora"> </option>
-                  <option value="turkishvan"> </option>
-                  <option value="bengal"></option>
-                  <option value="birman"></option>
-                  <option value="bombay"></option>
-                  <option value="britishshorthair"> </option>
-                  <option value="burmese"></option>
-                  <option value="chartreux"></option>
-                  <option value="cornishrex"> </option>
-                  <option value="devonrex"></option>
-                  <option value="egyptianmau"> </option>
-                  <option value="europeanburmese"> </option>
-                  <option value="exoticshorthair"> </option>
-                  <option value="havanabrown"> </option>
-                  <option value="himalayan"></option>
-                  <option value="japanesebobtail"> </option>
-                  <option value="korat"></option>
-                  <option value="laperm"></option>
-                  <option value="maincoon"> </option>
-                  <option value="manx"></option>
-                  <option value="norwegianforest"> </option>
-                  <option value="ocicat"></option>
-                  <option value="oriental"></option>
-                  <option value="persian"></option>
-                  <option value="peterbald"></option>
-                  <option value="pixiebob"></option>
-                  <option value="ragamuffin"></option>
-                  <option value="ragdoll"></option>
-                  <option value="russianblue"> </option>
-                  <option value="savannah"></option>
-                  <option value="scottishfold"> </option>
-                  <option value="selkirkrex"> </option>
-                  <option value="siamese"></option>
-                  <option value="siberian"></option>
-                  <option value="singapura"></option>
-                  <option value="somali"></option>
-                  <option value="sphynx"></option>
-                  <option value="tonkinese"></option>
-                  <option value="toyger"></option>
-                  <option value="turkishangora"> </option>
-                  <option value="turkishvan"> </option>
-                  <option value="bengal"></option>
-                  <option value="birman"></option>
-                  <option value="bombay"></option>
-                  <option value="britishshorthair"> </option>
-                  <option value="burmese"></option>
-                  <option value="chartreux"></option>
-                  <option value="cornishrex"> </option>
-                  <option value="devonrex"></option>
-                  <option value="egyptianmau"> </option>
-                  <option value="europeanburmese"> </option>
-                  <option value="exoticshorthair"> </option>
-                  <option value="havanabrown"> </option>
-                  <option value="himalayan"></option>
-                  <option value="japanesebobtail"> </option>
-                  <option value="korat"></option>
-                  <option value="laperm"></option>
-                  <option value="maincoon"> </option>
-                  <option value="manx"></option>
-                  <option value="norwegianforest"> </option>
-                  <option value="ocicat"></option>
-                  <option value="oriental"></option>
-                  <option value="persian"></option>
-                  <option value="peterbald"></option>
-                  <option value="pixiebob"></option>
-                  <option value="ragamuffin"></option>
-                  <option value="ragdoll"></option>
-                  <option value="russianblue"> </option>
-                  <option value="savannah"></option>
-                  <option value="scottishfold"> </option>
-                  <option value="selkirkrex"> </option>
-                  <option value="siamese"></option>
-                  <option value="siberian"></option>
-                  <option value="singapura"></option>
-                  <option value="somali"></option>
-                  <option value="sphynx"></option>
-                  <option value="tonkinese"></option>
-                  <option value="toyger"></option>
-                  <option value="turkishangora"> </option>
-                  <option value="turkishvan"> </option>
-                </select>
-                <p class="questiontitle">Age: </p>
-                <input class="ageselect" type="number" name="age" [(ngModel)]="newDog.age"
-                  style="width: 50%;">
-                <p class="questiontitle">Gender: </p>
-                <select class="select" type="text" name="gender" [(ngModel)]="newDog.gender"
-                  style="width: 50%;">
-                  <option value="male">Male</option>
-                  <option value="female">Female</option>
-                  <option value="unsure">Unsure</option>
-                </select>
-                <p class="questiontitle">Comfortable around dogs, cats, both or neither: </p>
-                <select class="select" type="text" name="comfortablecatdog" [(ngModel)]="newDog.comfortablecatdog"
-                  style="width: 50%;">
-                  <option value="dogs">Dogs</option>
-                  <option value="cats">Cats</option>
-                  <option value="both">Both</option>
-                  <option value="both">Neither</option>
-                  <option value="unsure">Unsure</option>
-                </select>
-                <p class="questiontitle">Comfortable around children: </p>
-                <select class="select" type="text" name="comfortablekids" [(ngModel)]="newDog.comfortablekids"
-                  style="width: 50%;">
-                  <option value="yes">Yes</option>
-                  <option value="no">No</option>
-                  <option value="unsure">Unsure</option>
-                </select>
-                <p class="questiontitle">Is this breed of dog known to have any health issues: </p>
-                <select class="select" type="text" name="health" [(ngModel)]="newDog.health"
-                  style="width: 50%;">
-                  <option value="yes">Yes</option>
-                  <option value="no">No</option>
-                  <option value="unsure">Unsure</option>
-                </select>
-              </thead>
-            </table>
-            <input type="submit">
-          </form>
-        </div>
+    <p>Create a Dog post</p>
+    <h4>Don't worry if you're unsure of any of this information, just give your best guess. You can always go back
+      and edit your post later on.</h4>
+    <div class="row justify-content-center align-items-center" style="padding-bottom: 5%;">
+      <form (submit)="createDog()">
+        <table>
+          <thead>
+            <p class="questiontitle">Breed Name:</p>
+            <select class="select" type="text" name="name" [(ngModel)]="newDog.breedname">
+              <option value="unsure">Unsure</option>
+              <option value="affenpinscher">Affenpinscher</option>
+              <option value="afghanhound">Afghan Hound</option>
+              <option value="americancurl">American Curl</option>
+              <option value="airedaleterrier">Airedale Terrier </option>
+              <option value="akita">Akita</option>
+              <option value="alaskanmalamute">Alaskan Malamute</option>
+              <option value="americanenglishcoonhound">American English Coonhound</option>
+              <option value="americaneskimodog">American Eskimo Dog</option>
+              <option value="americanfoxhound">American Foxhound</option>
+              <option value="americanstafforshireterrier">American Staffordshire Terrier </option>
+              <option value="americanwaterspaniel">American Water Spaniel</option>
+              <option value="anatolianshepherddog">Anatolian Shepherd Dog</option>
+              <option value="australiancattledog">Australian Cattle Dog </option>
+              <option value="devonrex">Australian Shepherd</option>
+              <option value="australianterrier">Australian Terrier </option>
+              <option value="basenji"> Basenji</option>
+              <option value="bassethound">Basset Hound</option>
+              <option value="beagle">Beagle</option>
+              <option value="beardedcollie">Bearded Collie</option>
+              <option value="beauceron">Beauceron</option>
+              <option value="bedlingtonterrier">Bedlington Terrier</option>
+              <option value="belgianmalinois">Belgian Malinois</option>
+              <option value="belgiansheepdog"> Belgian Sheepdog</option>
+              <option value="belgiantervuren">Belgian Tervuren</option>
+              <option value="bergamasco">Bergamasco </option>
+              <option value="bergerpicard">Berger Picard</option>
+              <option value="bernesemountaindog">Bernese Mountain Dog</option>
+              <option value="bichonfrise">Bichon Frise</option>
+              <option value="blackandtancoonhound">Black and Tan Coonhound</option>
+              <option value="blackrussianterrier">Black Russian Terrier</option>
+              <option value="bloodhound">Bloodhound</option>
+              <option value="bluetickcoonhound">Bluetick Coonhound</option>
+              <option value="russianblue"> </option>
+              <option value="savannah"></option>
+              <option value="scottishfold"> </option>
+              <option value="selkirkrex"> </option>
+              <option value="siamese"></option>
+              <option value="siberian"></option>
+              <option value="singapura"></option>
+              <option value="somali"></option>
+              <option value="sphynx"></option>
+              <option value="tonkinese"></option>
+              <option value="toyger"></option>
+              <option value="turkishangora"> </option>
+              <option value="turkishvan"> </option>
+              <option value="bengal"></option>
+              <option value="birman"></option>
+              <option value="bombay"></option>
+              <option value="britishshorthair"> </option>
+              <option value="burmese"></option>
+              <option value="chartreux"></option>
+              <option value="cornishrex"> </option>
+              <option value="devonrex"></option>
+              <option value="egyptianmau"> </option>
+              <option value="europeanburmese"> </option>
+              <option value="exoticshorthair"> </option>
+              <option value="havanabrown"> </option>
+              <option value="himalayan"></option>
+              <option value="japanesebobtail"> </option>
+              <option value="korat"></option>
+              <option value="laperm"></option>
+              <option value="maincoon"> </option>
+              <option value="manx"></option>
+              <option value="norwegianforest"> </option>
+              <option value="ocicat"></option>
+              <option value="oriental"></option>
+              <option value="persian"></option>
+              <option value="peterbald"></option>
+              <option value="pixiebob"></option>
+              <option value="ragamuffin"></option>
+              <option value="ragdoll"></option>
+              <option value="russianblue"> </option>
+              <option value="savannah"></option>
+              <option value="scottishfold"> </option>
+              <option value="selkirkrex"> </option>
+              <option value="siamese"></option>
+              <option value="siberian"></option>
+              <option value="singapura"></option>
+              <option value="somali"></option>
+              <option value="sphynx"></option>
+              <option value="tonkinese"></option>
+              <option value="toyger"></option>
+              <option value="turkishangora"> </option>
+              <option value="turkishvan"> </option>
+              <option value="bengal"></option>
+              <option value="birman"></option>
+              <option value="bombay"></option>
+              <option value="britishshorthair"> </option>
+              <option value="burmese"></option>
+              <option value="chartreux"></option>
+              <option value="cornishrex"> </option>
+              <option value="devonrex"></option>
+              <option value="egyptianmau"> </option>
+              <option value="europeanburmese"> </option>
+              <option value="exoticshorthair"> </option>
+              <option value="havanabrown"> </option>
+              <option value="himalayan"></option>
+              <option value="japanesebobtail"> </option>
+              <option value="korat"></option>
+              <option value="laperm"></option>
+              <option value="maincoon"> </option>
+              <option value="manx"></option>
+              <option value="norwegianforest"> </option>
+              <option value="ocicat"></option>
+              <option value="oriental"></option>
+              <option value="persian"></option>
+              <option value="peterbald"></option>
+              <option value="pixiebob"></option>
+              <option value="ragamuffin"></option>
+              <option value="ragdoll"></option>
+              <option value="russianblue"> </option>
+              <option value="savannah"></option>
+              <option value="scottishfold"> </option>
+              <option value="selkirkrex"> </option>
+              <option value="siamese"></option>
+              <option value="siberian"></option>
+              <option value="singapura"></option>
+              <option value="somali"></option>
+              <option value="sphynx"></option>
+              <option value="tonkinese"></option>
+              <option value="toyger"></option>
+              <option value="turkishangora"> </option>
+              <option value="turkishvan"> </option>
+            </select>
+            <p class="questiontitle">Age: </p>
+            <input class="ageselect" type="number" name="age" [(ngModel)]="newDog.age" style="width: 50%;">
+            <p class="questiontitle">Gender: </p>
+            <select class="select" type="text" name="gender" [(ngModel)]="newDog.gender" style="width: 50%;">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="unsure">Unsure</option>
+            </select>
+            <p class="questiontitle">Comfortable around dogs, cats, both or neither: </p>
+            <select class="select" type="text" name="comfortablecatdog" [(ngModel)]="newDog.comfortablecatdog"
+              style="width: 50%;">
+              <option value="dogs">Dogs</option>
+              <option value="cats">Cats</option>
+              <option value="both">Both</option>
+              <option value="both">Neither</option>
+              <option value="unsure">Unsure</option>
+            </select>
+            <p class="questiontitle">Comfortable around children: </p>
+            <select class="select" type="text" name="comfortablekids" [(ngModel)]="newDog.comfortablekids"
+              style="width: 50%;">
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+              <option value="unsure">Unsure</option>
+            </select>
+            <p class="questiontitle">Is this breed of dog known to have any health issues: </p>
+            <select class="select" type="text" name="health" [(ngModel)]="newDog.health" style="width: 50%;">
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+              <option value="unsure">Unsure</option>
+            </select>
+          </thead>
+        </table>
+        <input type="submit">
+      </form>
+    </div>
   </div>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
