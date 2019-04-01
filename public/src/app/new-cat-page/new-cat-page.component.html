@@ -91,7 +91,7 @@
         <table>
           <thead>
             <p class="questiontitle">Breed Name: </p>
-            <select class="select" type="text" name="name" [(ngModel)]="cat.breedname">
+            <select class="select" type="text" name="name" [(ngModel)]="newCat.breedname">
               <option value="unsure" style="text-align: center;">Unsure</option>
               <option value="abyssinian">Abyssinian</option>
               <option value="americanbobtail">American Bobtail</option>
@@ -140,17 +140,17 @@
               <option value="turkishvan">Turkish Van</option>
             </select>
             <p class="questiontitle">Age: </p>
-            <input class="ageselect" type="number" name="age" [(ngModel)]="cat.age"
+            <input class="ageselect" type="number" name="age" [(ngModel)]="newCat.age"
               style="width: 50%;">
             <p class="questiontitle">Gender: </p>
-            <select class="select" type="text" name="gender" [(ngModel)]="cat.gender"
+            <select class="select" type="text" name="gender" [(ngModel)]="newCat.gender"
               style="width: 50%;">
               <option value="male">Male</option>
               <option value="female">Female</option>
               <option value="unsure">Unsure</option>
             </select>
             <p class="questiontitle">Comfortable around around other dogs or cats?: </p>
-            <select class="select" type="text" name="comfortablecatdog" [(ngModel)]="cat.comfortablecatdog"
+            <select class="select" type="text" name="comfortablecatdog" [(ngModel)]="newCat.comfortablecatdog"
               style="width: 50%;">
               <option value="dogs">Dogs</option>
               <option value="cats">Cats</option>
@@ -159,14 +159,14 @@
               <option value="unsure">Unsure</option>
             </select>
             <p class="questiontitle">Comfortable around children: </p>
-            <select class="select" type="text" name="comfortablekids" [(ngModel)]="cat.comfortablekids"
+            <select class="select" type="text" name="comfortablekids" [(ngModel)]="newCat.comfortablekids"
               style="width: 50%;">
               <option value="yes">Yes</option>
               <option value="no">No</option>
               <option value="unsure">Unsure</option>
             </select>
             <p class="questiontitle">Is this breed of cat known to have any health issues: </p>
-            <select class="select" type="text" name="health" [(ngModel)]="cat.health"
+            <select class="select" type="text" name="health" [(ngModel)]="newCat.health"
               style="width: 50%;">
               <option value="yes">Yes</option>
               <option value="no">No</option>
