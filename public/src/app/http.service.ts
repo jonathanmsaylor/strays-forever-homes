@@ -38,7 +38,7 @@ export class HttpService {
   }
   removeDogById(_id){
     console.log('deleteDog', _id);
-    return this._http.post(`/api/pets/${_id}/deletedog`, _id);
+    return this._http.delete(`/api/pets/${_id}/deletedog`, _id);
   }
   removeCatById(_id){
     console.log('deleteDog', _id);

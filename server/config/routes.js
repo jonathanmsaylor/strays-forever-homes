@@ -12,7 +12,7 @@ module.exports = function(app){
     app.get('/api/pets/:id/editdog', pets.editDog);
     app.post('/api/pets/:id/updatedog', pets.updateDog);
     app.delete('/api/pets/:id/deletecat', pets.deleteCat);
-    app.post('/api/pets/:id/deletedog', pets.deleteDog);
+    app.delete('/api/pets/:id/deletedog', pets.deleteDog);
 
 
     app.all("*", (req, res, next) => {

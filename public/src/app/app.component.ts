@@ -11,6 +11,8 @@ export class AppComponent implements OnInit {
   newCat: any;
   newDog: any;
   pets = [];
+  cats = [];
+  dogs = [];
        
   constructor(private _route: ActivatedRoute, private _httpService: HttpService, private _router: Router) { }
 
