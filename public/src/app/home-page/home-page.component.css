@@ -16,7 +16,6 @@
         background: url(https://i.ibb.co/YkPrGNH/catdogheader.jpg);
         background-size: cover;
         padding-bottom: 100px;
-        background-color: rgba(128, 128, 128, 0.479);
     }
     #desktoprow {
         display: none;
@@ -31,18 +30,12 @@
         letter-spacing: 2px;
         padding-left: 2px;
         width: 100%;
-        background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
-        background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
-        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000', GradientType=0);
         font-weight: 500;
-        font-style: italic;
         cursor: default;
     }
     .subtitle {
         color: rgb(0, 0, 0);
-        margin-top: 12px;
-        margin-bottom: 12px;
+        margin-top: 40px;
         font-size: 15px;
         padding: 10px;
         padding-right: 12px;
@@ -62,35 +55,32 @@
     }
     
     .header {
-        background: url(https://i.ibb.co/YkPrGNH/catdogheader.jpg);
+        background: none;
         background-size: cover;
-        padding-bottom: 200px;
+        padding-bottom: 0;
         background-color: rgba(128, 128, 128, 0.479);
+        text-align: left;
     }
     .title {
         color: rgb(255, 255, 255);
-        padding-top: 10px;
-        font-size: 70px;
+        font-size: 40px;
         letter-spacing: 2px;
-        padding-left: 2px;
-        width: 100%;
-        background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
-        background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
-        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000', GradientType=0);
+        background-color: rgb(19, 199, 199);
         font-weight: 500;
-        font-style: italic;
+        margin-bottom: 0;
+        padding: 20px;
+        padding-left: 30px;
     }
     .subtitle {
         color: rgb(0, 0, 0);
-        margin-top: 12px;
-        margin-bottom: 12px;
         font-size: 20px;
-        padding: 10px;
-        padding-right: 12px;
+        font-style: italic;
+        margin: auto;
+        text-align: left;
+        padding-left: 14px;
     }
     .straydropdownbutton {
-        margin: 0;
+        margin-top: 0;
     }
 
     .table th {
