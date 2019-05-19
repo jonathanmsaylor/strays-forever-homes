@@ -43,6 +43,12 @@
     .straydropdownbutton {
         margin: 0;
     }
+    td {
+        color: white;
+    }
+    th {
+        color: black;
+    }
 }
 
 @media only screen and (min-width: 700px) {
