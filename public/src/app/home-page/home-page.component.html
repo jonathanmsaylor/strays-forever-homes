@@ -34,23 +34,28 @@
 </head>
 
 <body>
+  <!-- page container -->
   <div class="container-fluid"
     style="text-align: center; background-color: floralwhite; padding: 0; overflow-x: hidden;">
+    <!-- header bar and description -->
     <div class="header" [routerLink]="['']">
       <div class="row">
         <p class="title">A Stray's New Home</p>
       </div>
     </div>
-    <p class="subtitle">
-      Uniting stray Cats & Dogs with their new forever homes</p>
+    <!-- subtitle underneath the header -->
+    <p class="subtitle">Uniting stray Cats & Dogs with their new forever homes</p>
+    <!-- stray box dropdown -->
     <div class="container" style="margin-top: 40px;">
+      <!-- dropdown button -->
       <button type="button"
         style="border: 1px solid grey; background-color: #E7AB42; box-shadow: 2px 2px 2px rgb(202, 202, 202); margin: auto;"
         class="btn btn-success" data-toggle="collapse" data-target="#submitstraycollapse">
-        <!-- <span class="glyphicon glyphicon-collapse-down"></span> -->
         <p class="straydropdownbutton">Have you found a stray? Create a post</p>
       </button>
+      <!-- the cat and dog button content inside the dropdown -->
       <div id="submitstraycollapse" class="collapse">
+        <!-- the mobile options -->
         <div class="row" style="text-align: center;" id="mobilerow">
           <div class="col-sm">
             <button type="button" class="btn btn-primary"
@@ -63,6 +68,7 @@
               [routerLink]="['/dogs/new']">I have a Dog</button>
           </div>
         </div>
+        <!-- the desktop options -->
         <div class="row" style="text-align: center;" id="desktoprow">
           <div class="col-sm">
             <button type="button" class="btn btn-primary shadow-sm"
@@ -77,106 +83,106 @@
         </div>
       </div>
     </div>
+    <!-- the tables title text below the create a post button -->
     <div class="row" style="padding: 32px; justify-content: center;">
       <h4 style="margin: 0; ">Check out the tables below to see the current Cats and Dogs waiting for a loving home</h4>
     </div>
+    <!-- the cat's data table fade left transition -->
     <div data-aos="fade-left" data-aos-offset="0" data-aos-delay="400" data-aos-duration="800"
       data-aos-easing="ease-in-out">
-      <div class="row" style="margin: 1px; padding: 15px;">
-        <div class="table-responsive table-sm shadow-lg w-auto"
-          style="border: 1px solid black; cursor: default; padding-right: 0; border-radius: 8px;">
-          <table class="table table-hover w-auto" style="margin: 0; background-color: black;">
-            <thead>
-              <h2 style="margin: 0; padding: 10px; padding-right: 100px; font-family: bauhus; color: white;">Cats</h2>
-              <tr style="background-color: rgb(19, 199, 199); font-size: 25px; color: whitesmoke; font-size: 17px;">
-                <th scope="col">Breed Name</th>
-                <th scope="col">Age</th>
-                <th scope="col">Gender</th>
-                <th scope="col">Comfortable around other pets/animals?</th>
-                <th scope="col">Comfortable around children/people?</th>
-                <th scope="col">Any known health issues?</th>
-                <th scope="col">Actions</th>
-              </tr>
-            </thead>
-            <tbody style="font-size: 17.1px;">
-              <tr *ngFor="let cat of cats">
-                <td>{{cat.breedname}}</td>
-                <td>{{cat.age}}</td>
-                <td>{{cat.gender}}</td>
-                <td>{{cat.comfortablecatdog}}</td>
-                <td>{{cat.comfortablekids}}</td>
-                <td>{{cat.health}}</td>
-                <button class="btn btn-primary"
-                  style="border: 1.5px solid rgba(0, 164, 240, 0.267); color: black; background-color: whitesmoke; border-radius: 23px; font-size: 15px; padding: 5px; margin: 5px;"
-                  [routerLink]="['/cats', cat._id]">Details</button>
-                <button class="btn btn-primary"
-                  style="border: 1.5px solid rgba(255, 217, 0, 0.267); color: black; background-color: whitesmoke; border-radius: 23px; font-size: 15px; padding: 5px; margin: 5px;"
-                  [routerLink]="['/cats', cat._id, 'edit']">Edit</button>
-                <button class="btn btn-primary"
-                  style="border: 1.5px solid rgba(255, 0, 0, 0.226); color: black; background-color: whitesmoke; border-radius: 23px; font-size: 15px; padding: 5px; margin: 5px;"
-                  (click)="removeCat(cat._id)">Adopt!</button>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+      <!-- the tables container -->
+      <div class="table-sm w-auto"
+        style="border: 1px solid black; cursor: default; padding-right: 0;">
+        <table class="table w-auto" style="margin: 0; background-color: black;">
+          <!-- the tables header containing the cat's general information -->
+          <thead>
+            <h2 style="margin: 0; padding: 10px; padding-right: 100px; font-family: bauhus; color: white;">Cats</h2>
+            <tr style="background-color: rgb(49, 145, 201); font-size: 25px; font-size: 17px;">
+              <th scope="col">Breed Name</th>
+              <th scope="col">Age</th>
+              <th scope="col">Gender</th>
+              <th scope="col">Comfortable around other pets/animals?</th>
+              <th scope="col">Comfortable around children/people?</th>
+              <th scope="col">Any known health issues?</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <!-- the tables body containing the correct cat's general information using typescript -->
+          <tbody style="font-size: 17.1px;">
+            <tr *ngFor="let cat of cats">
+              <td style="color: rgb(49, 145, 201);">{{cat.breedname}}</td>
+              <td style="color: rgb(49, 145, 201);">{{cat.age}}</td>
+              <td style="color: rgb(49, 145, 201);">{{cat.gender}}</td>
+              <td style="color: rgb(49, 145, 201);">{{cat.comfortablecatdog}}</td>
+              <td style="color: rgb(49, 145, 201);">{{cat.comfortablekids}}</td>
+              <td style="color: rgb(49, 145, 201);">{{cat.health}}</td>
+              <button class="btn btn-primary"
+                style="border: 1.5px solid rgba(0, 164, 240, 0.267); color: black; background-color: whitesmoke; border-radius: 23px; font-size: 15px; padding: 5px; margin: 5px;"
+                [routerLink]="['/cats', cat._id]">Details</button>
+              <button class="btn btn-primary"
+                style="border: 1.5px solid rgba(255, 217, 0, 0.267); color: black; background-color: whitesmoke; border-radius: 23px; font-size: 15px; padding: 5px; margin: 5px;"
+                [routerLink]="['/cats', cat._id, 'edit']">Edit</button>
+              <button class="btn btn-primary"
+                style="border: 1.5px solid rgba(255, 0, 0, 0.226); color: black; background-color: whitesmoke; border-radius: 23px; font-size: 15px; padding: 5px; margin: 5px;"
+                (click)="removeCat(cat._id)">Adopt!</button>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
     <hr>
+    <!-- the dog's data table fade right transition -->
     <div data-aos="fade-right" data-aos-delay="0" data-aos-duration="800" data-aos-easing="ease-in-out">
-      <div class="row" style="margin: 1px; padding: 15px;">
-        <div class="table-responsive table-sm shadow-lg w-auto"
-          style="border: 1px solid black; cursor: default; padding-right: 0; border-radius: 8px;">
-          <table class="table table-hover w-auto" style="margin: 0; background-color: black;">
-            <thead>
-              <h2 style="margin: 0; padding: 10px; padding-right: 20px; font-family: bauhus; color: white;">Dogs</h2>
-              <tr
-                style="/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fac695+0,f5ab66+47,ef8d31+100;Orange+3D+%232 */
+      <!-- the tables container -->
+      <div class="table-sm w-auto"
+        style="border: 1px solid black; cursor: default; padding-right: 0;">
+        <table class="table w-auto" style="margin: 0; background-color: black;">
+          <!-- the tables header containing the dog's general information -->
+          <thead>
+            <h2 style="margin: 0; padding: 10px; padding-right: 20px; font-family: bauhus; color: white;">Dogs</h2>
+            <tr
+              style="/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fac695+0,f5ab66+47,ef8d31+100;Orange+3D+%232 */
             background: rgb(250,198,149); /* Old browsers */
             background: -moz-linear-gradient(top, rgba(250,198,149,1) 0%, rgba(245,171,102,1) 47%, rgba(239,141,49,1) 100%); /* FF3.6-15 */
             background: -webkit-linear-gradient(top, rgba(250,198,149,1) 0%,rgba(245,171,102,1) 47%,rgba(239,141,49,1) 100%); /* Chrome10-25,Safari5.1-6 */
             background: linear-gradient(to bottom, rgba(250,198,149,1) 0%,rgba(245,171,102,1) 47%,rgba(239,141,49,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
             filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fac695', endColorstr='#ef8d31',GradientType=0 ); /* IE6-9 */; font-size: 25px; color: whitesmoke; font-size: 17px;">
-                <th scope="col">Breed Name</th>
-                <th scope="col">Age</th>
-                <th scope="col">Gender</th>
-                <th scope="col">Comfortable around other pets/animals?</th>
-                <th scope="col">Comfortable around children/people?</th>
-                <th scope="col">Any known health issues?</th>
-                <th scope="col">Actions</th>
-              </tr>
-            </thead>
-            <tbody style="font-size: 17.1px;">
-              <tr *ngFor="let dog of dogs">
-                <td>{{dog.breedname}}</td>
-                <td>{{dog.age}}</td>
-                <td>{{dog.gender}}</td>
-                <td>{{dog.comfortablecatdog}}</td>
-                <td>{{dog.comfortablekids}}</td>
-                <td>{{dog.health}}</td>
-                <button class="btn btn-primary"
-                  style="border: 1.5px solid rgba(0, 164, 240, 0.267); color: black; background-color: whitesmoke; border-radius: 23px; font-size: 15px; padding: 5px; margin: 5px;"
-                  [routerLink]="['/dogs', dog._id]">Details</button>
-                <button class="btn btn-primary"
-                  style="border: 1.5px solid rgba(255, 217, 0, 0.267); color: black; background-color: whitesmoke; border-radius: 23px; font-size: 15px; padding: 5px; margin: 5px;"
-                  [routerLink]="['/dogs', dog._id, 'edit']">Edit</button>
-                <button class="btn btn-primary"
-                  style="border: 1.5px solid rgba(255, 0, 0, 0.226); color: black; background-color: whitesmoke; border-radius: 23px; font-size: 15px; padding: 5px; margin: 5px;"
-                  (click)="removeDog(dog._id)">Adopt!</button>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+              <th scope="col">Breed Name</th>
+              <th scope="col">Age</th>
+              <th scope="col">Gender</th>
+              <th scope="col">Comfortable around other pets/animals?</th>
+              <th scope="col">Comfortable around children/people?</th>
+              <th scope="col">Any known health issues?</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <!-- the tables body containing the correct dog's general information using typescript -->
+          <tbody style="font-size: 17.1px;">
+            <tr *ngFor="let dog of dogs">
+              <td style="color: rgba(250,198,149,1)">{{dog.breedname}}</td>
+              <td style="color: rgba(250,198,149,1)">{{dog.age}}</td>
+              <td style="color: rgba(250,198,149,1)">{{dog.gender}}</td>
+              <td style="color: rgba(250,198,149,1)">{{dog.comfortablecatdog}}</td>
+              <td style="color: rgba(250,198,149,1)">{{dog.comfortablekids}}</td>
+              <td style="color: rgba(250,198,149,1)">{{dog.health}}</td>
+              <button class="btn btn-primary"
+                style="border: 1.5px solid rgba(0, 164, 240, 0.267); color: black; background-color: whitesmoke; border-radius: 23px; font-size: 15px; padding: 5px; margin: 5px;"
+                [routerLink]="['/dogs', dog._id]">Details</button>
+              <button class="btn btn-primary"
+                style="border: 1.5px solid rgba(255, 217, 0, 0.267); color: black; background-color: whitesmoke; border-radius: 23px; font-size: 15px; padding: 5px; margin: 5px;"
+                [routerLink]="['/dogs', dog._id, 'edit']">Edit</button>
+              <button class="btn btn-primary"
+                style="border: 1.5px solid rgba(255, 0, 0, 0.226); color: black; background-color: whitesmoke; border-radius: 23px; font-size: 15px; padding: 5px; margin: 5px;"
+                (click)="removeDog(dog._id)">Adopt!</button>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
     <br>
     <br>
-    <!-- <hr> -->
-    <!-- <footer>
-      <p class="txt-railway"> <button
-        [routerLink]="['/about]">- About -</button></p>
-    </footer> -->
   </div>
-
+  <!-- the script to allow data fade in effects -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
